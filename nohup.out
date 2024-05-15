@@ -1,0 +1,1398 @@
+Traceback (most recent call last):
+  File "/home/liying/zhenguo/3-biaffine-taketurn/exp-conll-all/../src/main.py", line 7, in <module>
+    from parser import Parser
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 1, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 0
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1689384467, 954551136, 470324190, 83200133]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 1.57e-28
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+Traceback (most recent call last):
+  File "../src/main.py", line 37, in <module>
+    parser.run()
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 200, in run
+    self.load_model(self._conf.model_dir, self._conf.model_eval_num)
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 536, in load_model
+    assert os.path.exists(path)
+AssertionError
+223
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1689384782, 624962514, 736956750, 625901354]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 1.39e-29
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+223
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1689384809, 845940232, 455755813, 855049657]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 2.39e-28
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6274, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7200, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7050, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6513, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7079, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8530, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8506, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8728, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6827, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7556, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8162, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9130, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7497, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9590, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9183, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9803, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.2596, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.1362, device='cuda:0', grad_fn=<DivBackward0>)
+one_batch is noneturn_data_vndt_vndt-test.conll
+turn_data_vndt_vndt-test.conll(  223): loss=18.206 las=74.497, uas=81.947, 21919 (21919) words, 1020 sentences, time=145.741 [2023-07-15, 09:35:27]
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6274, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7200, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7050, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6513, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7079, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8530, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8506, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8728, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6827, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7556, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8162, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9130, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7497, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9590, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9183, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9803, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.2596, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.1362, device='cuda:0', grad_fn=<DivBackward0>)
+one_batch is noneturn_data_vndt_vndt-test.conll
+turn_data_vndt_vndt-test.conll(  223): loss=18.206 las=74.497, uas=81.947, 21919 (21919) words, 1020 sentences, time=163.150 [2023-07-15, 09:36:12]
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+223
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1689385064, 55440163, 23261301, 386819945]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 1.84e-28
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6274, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7200, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7050, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6513, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7079, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8530, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8506, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8728, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6827, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7556, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8162, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9130, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7497, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9590, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9183, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9803, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.2596, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.1362, device='cuda:0', grad_fn=<DivBackward0>)
+one_batch is noneturn_data_vndt_vndt-test.conll
+turn_data_vndt_vndt-test.conll(  223): loss=18.206 las=74.497, uas=81.947, 21919 (21919) words, 1020 sentences, time=116.019 [2023-07-15, 09:39:40]
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+223
+223
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1689582635, 592323420, 630630668, 819973128]
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1689582635, 592323420, 630630668, 819973128]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+init models
+100 768
+Orthogonal pretrainer loss: 4.08e-28
+100 768
+Orthogonal pretrainer loss: 4.08e-28
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+Traceback (most recent call last):
+  File "../src/main.py", line 37, in <module>
+    parser.run()
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 204, in run
+    self.evaluate(dataset,use_unlabel, output_file_name='./'+dataset.file_name_short+'.out')
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 429, in evaluate
+    inst_num, loss = self.train_or_eval_one_batch(dataset, is_training=False, unlabel= use_unlabel)
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 413, in train_or_eval_one_batch
+    arc_scores, label_scores = self.forward(words, ext_words, tags, lstm_masks, domains, dataset.domain_id, word_lens, chars_i, wordbert)
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 224, in forward
+    input_out = self._input_layer(words, ext_words, tags, domains, word_lens, chars_i, subword_idxs, subword_masks, token_starts_masks, wordbert, self._cuda_device)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/nn_modules.py", line 88, in forward
+    bert_outs = self.bert_embedding(subword_idxs, subword_masks, token_starts_masks,sens)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/bertembed.py", line 27, in forward
+    output_hidden_states=True
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/transformers/modeling_roberta.py", line 879, in forward
+    prediction_scores = self.lm_head(sequence_output)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/transformers/modeling_roberta.py", line 918, in forward
+    x = self.decoder(x)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: CUDA out of memory. Tried to allocate 1.62 GiB (GPU 0; 11.17 GiB total capacity; 1.27 GiB already allocated; 1.23 GiB free; 1.46 GiB cached)
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6274, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7200, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7050, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6513, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7079, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8530, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8506, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8728, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6827, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7556, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8162, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9130, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7497, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9590, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9183, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9803, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.2596, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.1362, device='cuda:0', grad_fn=<DivBackward0>)
+one_batch is noneturn_data_vndt_vndt-test.conll
+turn_data_vndt_vndt-test.conll(  223): loss=18.206 las=74.497, uas=81.947, 21919 (21919) words, 1020 sentences, time=203.008 [2023-07-17, 16:33:58]
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+223
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1693537570, 500759182, 983042776, 456701853]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 3.25e-28
+Traceback (most recent call last):
+  File "../src/main.py", line 37, in <module>
+    parser.run()
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 189, in run
+    self.init_models()
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 96, in init_models
+    bert_path, bert_dim, bert_layer)
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/nn_modules.py", line 65, in __init__
+    self.bert_embedding = Bert_Embedding(bert_path, bert_layer, bert_dim)
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/bertembed.py", line 15, in __init__
+    self.bert = AutoModelForMaskedLM.from_pretrained(bert_path)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/transformers/modeling_auto.py", line 977, in from_pretrained
+    return model_class.from_pretrained(pretrained_model_name_or_path, *model_args, config=config, **kwargs)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/transformers/modeling_utils.py", line 926, in from_pretrained
+    state_dict = torch.load(resolved_archive_file, map_location="cpu")
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/serialization.py", line 386, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/home/liying/anaconda3/envs/venv/lib/python3.7/site-packages/torch/serialization.py", line 580, in _load
+    deserialized_objects[key]._set_from_file(f, offset, f_should_read_directly)
+KeyboardInterrupt
+223
+Traceback (most recent call last):
+  File "/home/liying/zhenguo/3-biaffine-taketurn/exp-conll-all/../src/main.py", line 7, in <module>
+    from parser import Parser
+  File "/home/liying/zhenguo/3-biaffine-taketurn/src/parser.py", line 1, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+223
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1693537846, 258868663, 241066146, 194707001]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 6.12e-29
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+223
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1693538159, 858683206, 123260714, 341683874]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 2.51e-29
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6274, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7200, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7050, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6513, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7079, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8530, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8506, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8728, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6827, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7556, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8162, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9130, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7497, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9590, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9183, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9803, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.2596, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.1362, device='cuda:0', grad_fn=<DivBackward0>)
+one_batch is noneturn_data_vndt_vndt-test.conll
+turn_data_vndt_vndt-test.conll(  223): loss=18.206 las=74.497, uas=81.947, 21919 (21919) words, 1020 sentences, time=114.703 [2023-09-01, 11:17:54]
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6274, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7200, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7050, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6513, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7079, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8530, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8506, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8728, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6827, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7556, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8162, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9130, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7497, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9590, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9183, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9803, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.2596, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.1362, device='cuda:0', grad_fn=<DivBackward0>)
+one_batch is noneturn_data_vndt_vndt-test.conll
+turn_data_vndt_vndt-test.conll(  223): loss=18.206 las=74.497, uas=81.947, 21919 (21919) words, 1020 sentences, time=736.071 [2023-09-01, 11:23:02]
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+223
+223
+223
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x cpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/liying/parser/data/giga.bin
+ext_word_dict_full_path /home/liying/parser/data/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 60
+word_num_one_batch 1500
+is_shared_lstm 1
+is_gate_lstm 0
+is_diff_loss 1
+is_domain_emb 1
+is_adversary 1
+is_multi 0
+is_charlstm 1
+model_eval_num 223
+data_dir /home/liying/zhenguo/3-biaffine-taketurn/data/vndt
+train_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-train.conll
+dev_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-dev.conll
+test_files /home/liying/zhenguo/3-biaffine-taketurn/data/vndt/vndt-test.conll
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 100
+eval_every_update_step_num 161
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 4
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+learning_rate 1e-4
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.001
+diff_bate_loss 0.01
+random_seeds =  [1693553111, 465607415, 576500068, 449176334]
+Loading dict words done: 7975 keys; unknown-id=1
+Loading dict chars done: 167 keys; unknown-id=1
+Loading dict postags done: 3 keys; unknown-id=1
+Loading dict labels done: 33 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short turn_data_vndt_vndt-test.conll
+the filename is wrong, we cann't distinguish its domain turn_data_vndt_vndt-test.conll
+Reading turn_data_vndt_vndt-test.conll done: 1020 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 296 14 5 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 187 19 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 161 24 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 110 28 2 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 113 34 3 14
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 81 42 2 17
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 42 51 1 19
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 30 87 2 20
+turn_data_vndt_vndt-test.conll can provide 22 batches in total with 8 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 1.27e-29
+Some weights of XLMRobertaForMaskedLM were not initialized from the model checkpoint at /home/liying/xlm-roberta-base/ and are newly initialized: ['lm_head.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+167
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1200 800
+Orthogonal pretrainer loss: 2.00e+02
+Load model ./models-223/ done.
+turn_data_vndt_vndt-test.conll
+parser loss: tensor(0.4508, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6274, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7200, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7050, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6513, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7079, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8530, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8506, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8728, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.6827, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7556, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.8162, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9130, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.7497, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9590, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9183, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(0.9803, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.2596, device='cuda:0', grad_fn=<DivBackward0>)
+parser loss: tensor(1.1362, device='cuda:0', grad_fn=<DivBackward0>)
+one_batch is noneturn_data_vndt_vndt-test.conll
+turn_data_vndt_vndt-test.conll(  223): loss=18.206 las=74.497, uas=81.947, 21919 (21919) words, 1020 sentences, time=109.914 [2023-09-01, 15:27:01]
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+/pytorch/aten/src/ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+2
+2
+2
+./run.sh: 行 5: 16814 已终止               $exe --is_dictionary_exist 1 --random_seed 1540422239 --is_train 1 --is_test 0 > log.train 2>&1
+2
+2
+395
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
+ls: 无法访问models-*: 没有那个文件或目录
+
